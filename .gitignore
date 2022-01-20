@@ -1,2 +1,6 @@
+# Ignore all composer files
 vendor
+# Ignore all .idea files
 *.idea
+# Ignore Composer Lock
+composer.lock

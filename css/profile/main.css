@@ -1,0 +1,468 @@
+/* CSS */
+/**,*/
+/**::after,*/
+/**::before {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: inherit;*/
+/*}*/
+
+html {
+    /* this defines what 1 rem is */
+    font-size: 62.5%; /* 1rem = 10px; 10/16px = 62.5% */
+    scroll-behavior: smooth;
+}
+
+
+/*.jumbotron {*/
+/*    padding: 2rem 1rem;*/
+/*    margin-bottom: 2rem;*/
+/*    background-color: #e9ecef;*/
+/*    border-radius: .3rem;*/
+/*}*/
+
+.nav-link {
+    font-size: 3.2rem !important;
+    color: rgb(255, 255, 255) !important;
+    padding-left: 1.5rem !important;
+}
+
+/* Top Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+.fas:hover {
+    cursor: pointer;
+    color: silver;
+}
+
+.header {
+    height: 100vh;
+    background-image: radial-gradient(circle, red, black);
+    /*background-image: url(../../images/gamerbackround2.png);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Fugaz One' , cursive;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+/* Community */
+.community {
+    padding: 10rem 0 4rem 0;
+    text-align: center;
+}
+
+.community_textarea h2 {
+    font-size: 3rem;
+}
+
+.community_textarea p {
+    color: #777777;
+    font-family: 'Lato' , Sans-Serif;
+    font-size: 2rem !important;
+    word-wrap: break-word;
+    width: 90rem;
+    transform: translate(57%, 3%);
+}
+
+.community_textarea span {
+    background-color: transparent !important;
+}
+
+.card-footer {
+    background-color: transparent;
+    padding: 1rem 1rem;
+}
+
+/* Tournaments */
+.tournaments {
+    padding: 10rem 0 8rem 0;
+    text-align: center;
+}
+
+.card {
+    width: 35rem !important;
+    text-align: center;
+    display: inline-block;
+    margin-top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.card-title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.card p {
+    font-size: 2rem !important;
+}
+
+.btn{
+    width: 15rem;
+    height: 3.5rem;
+}
+
+.btn-primary {
+    font-size: 1.5rem !important;
+}
+
+.btn-success {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.row { /* Spreads the cards out */
+    --bs-gutter-x: 10.5rem;
+    left: -.5rem !important;
+    position: relative;
+}
+/* Modals */
+.modal .row { /* Lay out in the modal */
+    --bs-gutter-x: 1rem !important;
+}
+
+.modal-title {
+    font-size: 2rem;
+}
+
+.modal label, input {
+    font-size: 2rem !important;
+}
+
+.modal .btn-success {
+    margin: 0 !important;
+}
+
+.modal .btn-outline-danger {
+    font-size: 1.5rem;
+}
+
+.tournaments .modal p {
+    font-size: 2rem;
+}
+
+/* Socials */
+.socials {
+    /*background-color: red;*/
+    padding: 7rem 0 8rem 0;
+}
+
+/* social icons */
+.fa-facebook-f:hover {
+    color: rgb(66, 103, 178);
+}
+
+.fa-twitch:hover {
+    color: rgb(100, 65, 165);
+}
+
+.fa-discord:hover {
+    color: rgb(114, 137, 218);
+}
+
+.fa-youtube:hover {
+    color: rgb(255, 0, 0);
+}
+
+.fa-instagram:hover {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image:
+        linear-gradient(to right,
+        rgb(251, 173, 80),
+        rgb(205, 72, 107),
+        rgb(138, 58 ,185),
+        rgb(76, 104, 215));
+}
+
+.fa-twitter:hover {
+    color: rgb(0, 172, 238);
+}
+
+#services {
+    text-align: center;
+    transform: translateZ(0);
+}
+#services h2 {
+    margin: 8rem 0 4rem;
+    color: #000;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+#services li {
+    width: 12rem;
+    height: 14rem;
+    display: inline-block;
+    margin: 2rem;
+    list-style: none;
+}
+#services li div {
+    width: 12rem;
+    height: 12rem;
+    color: #000;
+    font-size: 6.4rem;
+    text-align: center;
+    line-height: 12rem;
+    transition: all 0.5s ease;
+}
+#services li a {
+    color: #000;
+}
+#services li div:hover {
+    transform: rotate(360deg);
+    border-radius: 10rem;
+    background-color: #000;
+}
+#services li span {
+    width: 12rem;
+    height: 2rem;
+    display: block;
+    padding: 1.5rem 0;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Footer */
+.site-footer
+{
+    background-color:#26272b;
+    padding:4.5rem 0 2rem;
+    font-size:1.5rem;
+    line-height:2.4rem;
+    color:#737373;
+}
+.site-footer hr
+{
+    border-top-color:#bbb;
+    opacity:0.5;
+}
+.site-footer hr.small
+{
+    margin:2rem 0;
+}
+.site-footer h6
+{
+    color:#fff;
+    font-size:1.6rem;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px;;
+}
+.site-footer a
+{
+    color:#737373;
+}
+.site-footer a:hover
+{
+    color:#3366cc;
+    text-decoration:none;
+}
+.footer-links
+{
+    padding-left:0;
+    list-style:none;
+}
+.footer-links li
+{
+    display:block;
+}
+.footer-links a
+{
+    color:#737373;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+    color:#3366cc;
+    text-decoration:none;
+}
+.footer-links.inline li
+{
+    display:inline-block;
+}
+.site-footer .social-icons
+{
+    text-align:right;
+}
+.site-footer .social-icons a
+{
+    width:4rem;
+    height:4rem;
+    line-height:4rem;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d;
+}
+.copyright-text
+{
+    margin:0
+}
+@media (max-width:99.2rem)
+{
+    .site-footer [class^=col-]
+    {
+        margin-bottom:3rem;
+    }
+}
+
+@media (max-width:76.7rem)
+{
+    .site-footer
+    {
+        padding-bottom:0;
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+        text-align:center;
+    }
+}
+.social-icons
+{
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none;
+}
+.social-icons li
+{
+    display:inline-block;
+    margin-bottom:4px;
+}
+.social-icons li.title
+{
+    margin-right:1.5rem;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:1.3rem;
+}
+.social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:1.6rem;
+    display:inline-block;
+    line-height:44.4rem;
+    width:4.4rem;
+    height:4.4rem;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+    color:#fff;
+    background-color:#29aafe;
+}
+.social-icons.size-sm a
+{
+    line-height:3.4rem;
+    height:34rem;
+    width:34rem;
+    font-size:1.4rem;
+}
+.social-icons a.facebook:hover
+{
+    background-color:#3b5998;
+}
+
+@media (max-width:76.7rem)
+{
+    .social-icons li.title
+    {
+        display:block;
+        margin-right:0;
+        font-weight:600;
+    }
+}
+
+/*@media (max-width: 1600px) {*/
+
+/*}*/
+
+/*@media (max-width: 1200px) {*/
+/*    .row {*/
+/*        --bs-gutter-x: 10.5rem;*/
+/*        left: -.5rem !important;*/
+/*    }*/
+/*})*/
+
+/*@media (max-width: 900px) {*/
+
+/*}*/
+
+/*@media (max-width: 600px) {*/
+
+/*}*/
+
+
+
+

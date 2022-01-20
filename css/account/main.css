@@ -1,0 +1,364 @@
+/* CSS3 */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    /* this defines what 1 rem is */
+    font-size: 62.5%; /* 1rem = 10px; 10/16px = 62.5% */
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+}
+
+.required {
+    color: red;
+}
+
+/* Nav */
+
+.navbar-brand img{
+    width: 0;
+    height: 0;
+}
+.navbar {
+    font-size: 3rem;
+    top: 5rem;
+    margin-right: 1.5rem;
+    position: static;
+}
+
+/* Top Button */
+#TopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#TopButton:hover {
+    background-color: #555;
+}
+
+.fas {
+    color: black;
+}
+
+/* User */
+.User {
+    padding: 7rem 0 8rem 0;
+}
+
+.User .btn-outline-primary {
+    font-size: 2rem;
+    position: relative;
+    left: 75rem;
+    top: 1rem;
+}
+
+.form-label {
+    font-size: 2.5rem !important;
+}
+
+
+.btn-update-user {
+    font-size: 2rem;
+    position: relative;
+    left: 41rem;
+}
+
+/* Images */
+.ImageUpload {
+    padding: 7rem 0 8rem 0;
+}
+
+.ImageUpload .container {
+    position: relative;
+    top: -2rem;
+    left: -18rem;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 22rem;
+    background-position: center center;
+    background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+    background-color:#fff;
+    background-size: cover;
+    background-repeat:no-repeat;
+    display: inline-block;
+    box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+}
+.btn-primary
+{
+    display:block;
+    border-radius:0px;
+    box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
+    margin-top:-5px;
+    font-size: 1.5rem;
+}
+.imgUp
+{
+    margin-bottom:1.5rem;
+}
+.del
+{
+    position:absolute;
+    top:0px;
+    right:1.5rem;
+    width:3rem;
+    height:3rem;
+    text-align:center;
+    line-height:3rem;
+    background-color:rgba(255,255,255,0.6);
+    cursor:pointer;
+}
+.imgAdd
+{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    background-color:#4bd7ef;
+    color:#fff;
+    box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
+    text-align:center;
+    line-height:3rem;
+    margin-top:0rem;
+    cursor:pointer;
+    font-size:1.5rem;
+}
+
+.ImageUpload form {
+    position: relative;
+    top: 2rem;
+    left: 73rem;
+}
+
+.btn-update-profile {
+    font-size: 2rem;
+    position: relative;
+    left: 41rem;
+}
+
+/* Community Bio */
+.CommunityBio {
+    padding: 7rem 0 6rem 0;
+}
+
+form#CommunityBiographyForm {
+    width: 50%;
+}
+
+.CommunityBio .tox.tox-tinymce {
+    height: 30rem !important;
+}
+
+.CommunityBio .btn-update {
+    font-size: 2rem;
+    position: relative;
+    top: 1.5rem;
+    left: 134rem;
+}
+
+/* Social Icons */
+.SocialIcons {
+padding: 7rem 0 8rem 0;
+}
+
+.SocialIcons .btn-update {
+    position: relative;
+    left: 134rem;
+    top: 4rem;
+    font-size: 2rem;
+}
+
+.form-switch {
+    padding-left: 94.5rem !important;
+    font-size: 2rem;
+}
+
+.form-check {
+    min-height: 4.5rem;
+}
+
+.fab {
+    font-size: 3rem !important;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Tournaments */
+.Tournament {
+    padding: 7rem 0 8rem 0;
+}
+
+#tournamentEdit {
+    position: relative;
+    left: 1rem;
+}
+
+.dot {
+    height: 15rem;
+    width: 18rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    left: 25rem;
+    top: -4rem;
+    margin: 4rem;
+}
+
+/* Add Button */
+.dot_add {
+    border: solid green;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.dot_add:active {
+    transform: translateY(4px);
+    box-shadow: 1px 1px 5px #000;
+}
+.fa-plus{
+    position: absolute;
+    left: 6.3rem;
+    top: 4.3rem;
+    font-size: 6rem;
+    color: green;
+}
+
+/* Edit Button */
+.dot_edit {
+    border: solid blue;
+    box-shadow: 1px  1px 2px #000;
+}
+
+.dot_edit:active {
+    transform: translateY(4px);
+    box-shadow: 1px 1px 5px #000;
+}
+
+.fa-pencil-alt {
+    position: absolute;
+    font-size: 6rem;
+    color: #0a53be;
+    left: 5.5rem;
+    top: 4.5rem;
+}
+
+/* Delete Button */
+.dot_delete {
+    border: solid red;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.dot_delete:active {
+    transform: translateY(4px);
+    box-shadow: 1px 1px 5px #000;
+}
+
+.fa-minus {
+    position: absolute;
+    font-size: 6rem;
+    color: red;
+    left: 6.3rem;
+    top: 4.5rem;
+}
+
+.Tournament .modal p {
+    font-size: 2rem;
+}
+
+.Tournament .modal-title {
+    font-size: 2rem;
+}
+
+.g-3, .gx-3 {
+    --bs-gutter-x: 43rem;
+}
+
+.Tournament .btn-success, .btn-outline-danger {
+    font-size: 2rem;
+}
+
+.grouping {
+    display: inline-block;
+    text-align: center;
+}
+
+.grouping label {
+    position: relative;
+    top: 21rem;
+    left: 25.5rem;
+    font-size: 3rem;
+    }
+
+
+/* Tournament Modal Forms */
+.Tournament .modal input {
+    width: 32%;
+}
+
+.Tournament .tox.tox-tinymce {
+    width: 64% !important;
+    height: 30rem !important;
+}
+
+
+/* Payments */
+.Payments {
+    padding: 7rem 0 8rem 0;
+}
+
+.form-control {
+    width: 25%;
+    font-size: 2rem;
+    height: 2.8rem
+}
+
+.form-group {
+    position: relative;
+    left: 49rem;
+}
+
+.form-text {
+    font-size: 1rem;
+}
+
+.fa-paypal {
+    color: rgb(59, 123, 191);
+    font-size: 6rem !important;
+}
+
+.Payments .btn-update {
+    position: relative;
+    top: 1.5rem;
+    left: 74rem;
+    font-size: 2rem;
+}
+

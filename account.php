@@ -236,8 +236,46 @@
 						<button id="EditTournament" class="dot dot_edit"><i class="fas fa-pencil-alt"></i></button>
 					</div>
 					<div class="grouping">
-						<label for="DeleteTournament">Remove</label>
-						<button id="DeleteTournament" class="dot dot_delete"><i class="fas fa-minus"></i></button>
+						<label for="RemoveTournament">Remove</label>
+						<button id="RemoveTournament" class="dot dot_delete" data-bs-toggle="modal" data-bs-target="#RemoveTournamentModal"><i class="fas fa-minus"></i></button>
+					</div>
+					<!-- Delete Tournament Modal-->
+					<div class="modal fade" id="RemoveTournamentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="RemoveTournamentLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="RemoveTournamentLabel">Remove Tournament?</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form id="RemoveTournamentForm" class="row g-3">
+										<input type="hidden" name="profile-id" value="<?php echo $profile['ID']; ?>">
+										<div class="col-md-12">
+											<label for="TournamentSelect" class="form-label">Choose a Tournament:</label><span class="required">*</span>
+											<?php
+												$tournamentStatement = "SELECT ID, NAME, CREATION_DATE FROM TOURNAMENT WHERE PROFILE_ID = '" . $profile['ID'] . "'";
+												$tournamentQuery = $con->query($tournamentStatement);
+											?>
+											<select id="TournamentSelect" name="tournament-select" class="form-control" required>
+												<?php
+													while ($tournament = mysqli_fetch_assoc($tournamentQuery)) {
+														$prettyDate = date_create($tournament['CREATION_DATE']);
+													?>
+													<option value="<?php echo $tournament['ID'] ?>"><?php echo $tournament['NAME'] . ' (' . date_format($prettyDate, "m/d/Y") . ')'; ?></option>
+												<?php } ?>
+											</select>
+										</div>
+										<div id="RemoveTournamentAlert" class="alert" role="alert" hidden>
+											<!-- This will be handled by js -->
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+									<button type="submit" form="RemoveTournamentForm" class="btn btn-danger">Delete</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
